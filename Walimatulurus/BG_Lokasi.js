@@ -1,3 +1,13 @@
+document.addEventListener("DOMContentLoaded", function() {
+  var elements = document.querySelectorAll('.premium-mobile-menu__item.elementor-repeater-item-ed9fac8');
+  elements.forEach(function(element) {
+    element.addEventListener('click', function(event) {
+      event.preventDefault();
+      Lokasi();
+      });
+    });
+  });
+
 async function Lokasi() {
   const peta = Peranti_iOS() ? "https://maps.apple.com/place?auid=4664738821478130747&lsp=9902" : "https://maps.app.goo.gl/a3RfsvUu5zifVAAw5";
   await Swal.fire({
