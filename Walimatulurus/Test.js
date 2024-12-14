@@ -1,31 +1,28 @@
 document.addEventListener("DOMContentLoaded", function() {
-  // Select the element you want to attach the onclick to
-  var element = document.querySelector('.premium-mobile-menu__item.elementor-repeater-item-3e1d4c1');
+  // Select all matching elements
+  var elements = document.querySelectorAll('.premium-mobile-menu__item.elementor-repeater-item-3e1d4c1');
   
-  // Select the popup and close button
-  var popup = document.getElementById('popup');
-  var closeBtn = document.querySelector('.close-btn');
-
-  // Add click event to the element
-  if (element) {
+  // Loop through each element and add the onclick event
+  elements.forEach(function(element) {
     element.onclick = function() {
-      // Show the popup when the element is clicked
-      popup.style.display = 'block';
+      showLocationPopup();
     };
+  });
+
+  // Show the popup
+  function showLocationPopup() {
+    document.getElementById('locationPopup').style.display = 'block';
   }
 
-  // Add click event to close the popup when the close button is clicked
-  if (closeBtn) {
-    closeBtn.onclick = function() {
-      // Hide the popup when the close button is clicked
-      popup.style.display = 'none';
-    };
+  // Close the popup
+  function closePopup() {
+    document.getElementById('locationPopup').style.display = 'none';
   }
 
-  // Close the popup if the user clicks anywhere outside the popup content
-  window.onclick = function(event) {
-    if (event.target === popup) {
-      popup.style.display = 'none';
+  // Optional: Close the popup if the overlay is clicked
+  document.querySelector('.popup-overlay').addEventListener('click', function(event) {
+    if (event.target === document.querySelector('.popup-overlay')) {
+      closePopup();
     }
-  };
+  });
 });
