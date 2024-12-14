@@ -1,5 +1,5 @@
 async function Lokasi() {
-  const peta = Peranti_iOS() ? "https://maps.apple.com/place?auid=4664738821478130747&lsp=9902" : "https://maps.app.goo.gl/a3RfsvUu5zifVAAw5";
+  const peta = Kesan_Peranti() ? "https://maps.apple.com/place?auid=4664738821478130747&lsp=9902" : "https://maps.app.goo.gl/a3RfsvUu5zifVAAw5";
   await Swal.fire({
     title: 'Lokasi',
     position: 'bottom',
