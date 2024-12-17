@@ -1,0 +1,18 @@
+{
+  "@context": "https://w3id.org/openbadges/v2",
+  "type": "BadgeClass",
+  "id": "https://raw.githubusercontent.com/your-username/your-repository/main/glide-certification-level1.json", 
+  "name": "Glide Certification: Level 1",
+  "description": "Awarded to individuals who have successfully completed the Glide Certification Level 1 course, demonstrating proficiency in building no-code applications using Glide.",
+  "image": "https://storage.googleapis.com/glide-prod.appspot.com/uploads-v2/a7SBYQ5AlBCrp1XFM1Qb/pub/38CE4usg0VVcIf217OL0.png",
+  "criteria": {
+    "narrative": "Complete the Glide Certification Level 1 course and pass the final assessment with a minimum score of 80%."
+  },
+  "issuer": {
+    "id": "https://learn.glideapps.com/dl/17171d",
+    "type": "Issuer",
+    "name": "Glide University",
+    "url": "https://www.glideapps.com"
+  },
+  "dateCreated": "2024-01-31T00:00:00Z"
+}
